@@ -1,6 +1,7 @@
 #include <iostream>
 
 int fibonacci_iterative(int sequence);
+int fibonacci_recursive(int sequence);
 
 int main()
 {
@@ -35,4 +36,15 @@ int fibonacci_iterative(int sequence)
 		}
 
 		return term_number_1;
+}
+
+int fibonacci_recursive(int sequence)
+{
+
+
+	if (sequence <= 2)
+		return 1;
+	else return fibonacci_recursive(sequence - 1) + fibonacci_recursive(sequence - 2);
+
+
 }
